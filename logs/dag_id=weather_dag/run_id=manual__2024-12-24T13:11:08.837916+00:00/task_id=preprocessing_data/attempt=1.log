@@ -1,0 +1,659 @@
+[2024-12-24T13:11:16.824+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag.preprocessing_data manual__2024-12-24T13:11:08.837916+00:00 [queued]>
+[2024-12-24T13:11:16.838+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag.preprocessing_data manual__2024-12-24T13:11:08.837916+00:00 [queued]>
+[2024-12-24T13:11:16.838+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2024-12-24T13:11:16.851+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): preprocessing_data> on 2024-12-24 13:11:08.837916+00:00
+[2024-12-24T13:11:16.859+0000] {standard_task_runner.py:60} INFO - Started process 27802 to run task
+[2024-12-24T13:11:16.862+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'weather_dag', 'preprocessing_data', 'manual__2024-12-24T13:11:08.837916+00:00', '--job-id', '2097', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmpyo6uf063']
+[2024-12-24T13:11:16.864+0000] {standard_task_runner.py:88} INFO - Job 2097: Subtask preprocessing_data
+[2024-12-24T13:11:16.880+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-24T13:11:16.917+0000] {task_command.py:423} INFO - Running <TaskInstance: weather_dag.preprocessing_data manual__2024-12-24T13:11:08.837916+00:00 [running]> on host f70f31c57d74
+[2024-12-24T13:11:16.983+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thiernosidybah232@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_dag' AIRFLOW_CTX_TASK_ID='preprocessing_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-24T13:11:08.837916+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-24T13:11:08.837916+00:00'
+[2024-12-24T13:11:16.994+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:16.995+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:16.996+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:16.997+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:16.997+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:16.998+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:16.999+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:16.999+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.000+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.001+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.003+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:17.003+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.004+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.005+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.005+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.006+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.006+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.007+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.008+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.008+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.010+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:17.011+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.011+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.012+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.013+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.013+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.014+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.014+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.015+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.015+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.017+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:17.018+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.018+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.019+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.020+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.020+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.021+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.021+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.022+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.023+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.025+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:17.025+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.026+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.026+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.027+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.028+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.028+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.029+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.029+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.030+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.032+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:17.032+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.033+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.034+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.034+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.035+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.035+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.036+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.037+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.037+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.039+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:17.040+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.040+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.041+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.042+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.042+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.043+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.043+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.044+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.044+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.047+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:17.047+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.048+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.049+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.049+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.050+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.050+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.051+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.052+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.052+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.054+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, "target"] = data_temp['temperature'].shift(1)
+
+[2024-12-24T13:11:17.055+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.055+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.056+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.057+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.057+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.058+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.058+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.059+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.060+0000] {warnings.py:109} WARNING - /opt/***/dags/extract.py:132: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_temp.loc[:, f"temp_m-{element}"] = data_temp['temperature'].shift(-element)
+
+[2024-12-24T13:11:17.066+0000] {python.py:201} INFO - Done. Returned value was:       temperature  pression  ...  city_New York  city_Toulouse
+2504       274.02      1031  ...          False          False
+2495       274.02      1031  ...          False          False
+2486       274.02      1031  ...          False          False
+2477       274.02      1031  ...          False          False
+2468       274.02      1031  ...          False          False
+...           ...       ...  ...            ...            ...
+117        284.14      1029  ...          False           True
+108        284.14      1029  ...          False           True
+99         284.14      1029  ...          False           True
+90         284.14      1029  ...          False           True
+81         284.14      1029  ...          False           True
+
+[2430 rows x 21 columns]
+[2024-12-24T13:11:17.152+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=weather_dag, task_id=preprocessing_data, execution_date=20241224T131108, start_date=20241224T131116, end_date=20241224T131117
+[2024-12-24T13:11:17.197+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-12-24T13:11:17.234+0000] {taskinstance.py:3280} INFO - 3 downstream tasks scheduled from follow-on schedule check

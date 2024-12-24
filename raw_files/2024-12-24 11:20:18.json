@@ -1,0 +1,420 @@
+{
+    "Toulouse": {
+        "coord": {
+            "lon": 1.4437,
+            "lat": 43.6043
+        },
+        "weather": [
+            {
+                "id": 300,
+                "main": "Drizzle",
+                "description": "light intensity drizzle",
+                "icon": "09d"
+            },
+            {
+                "id": 701,
+                "main": "Mist",
+                "description": "mist",
+                "icon": "50d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 282.14,
+            "feels_like": 280.39,
+            "temp_min": 282.14,
+            "temp_max": 282.14,
+            "pressure": 1029,
+            "humidity": 100,
+            "sea_level": 1029,
+            "grnd_level": 1007
+        },
+        "visibility": 2900,
+        "wind": {
+            "speed": 3.09,
+            "deg": 320
+        },
+        "clouds": {
+            "all": 100
+        },
+        "dt": 1735039216,
+        "sys": {
+            "type": 1,
+            "id": 6467,
+            "country": "FR",
+            "sunrise": 1735025150,
+            "sunset": 1735057316
+        },
+        "timezone": 3600,
+        "id": 2972315,
+        "name": "Toulouse",
+        "cod": 200
+    },
+    "Nantes": {
+        "coord": {
+            "lon": -1.5833,
+            "lat": 47.1667
+        },
+        "weather": [
+            {
+                "id": 701,
+                "main": "Mist",
+                "description": "mist",
+                "icon": "50d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 284.11,
+            "feels_like": 283.69,
+            "temp_min": 284.11,
+            "temp_max": 285.37,
+            "pressure": 1030,
+            "humidity": 93,
+            "sea_level": 1030,
+            "grnd_level": 1027
+        },
+        "visibility": 3500,
+        "wind": {
+            "speed": 1.54,
+            "deg": 330
+        },
+        "clouds": {
+            "all": 100
+        },
+        "dt": 1735039176,
+        "sys": {
+            "type": 1,
+            "id": 6574,
+            "country": "FR",
+            "sunrise": 1735026683,
+            "sunset": 1735057237
+        },
+        "timezone": 3600,
+        "id": 2990968,
+        "name": "Arrondissement de Nantes",
+        "cod": 200
+    },
+    "Grenoble": {
+        "coord": {
+            "lon": 5.8333,
+            "lat": 45.0833
+        },
+        "weather": [
+            {
+                "id": 803,
+                "main": "Clouds",
+                "description": "broken clouds",
+                "icon": "04d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 270.13,
+            "feels_like": 265.27,
+            "temp_min": 270.13,
+            "temp_max": 270.13,
+            "pressure": 1026,
+            "humidity": 92,
+            "sea_level": 1026,
+            "grnd_level": 899
+        },
+        "visibility": 9982,
+        "wind": {
+            "speed": 3.86,
+            "deg": 3,
+            "gust": 6.81
+        },
+        "clouds": {
+            "all": 82
+        },
+        "dt": 1735038630,
+        "sys": {
+            "type": 2,
+            "id": 2004515,
+            "country": "FR",
+            "sunrise": 1735024416,
+            "sunset": 1735055942
+        },
+        "timezone": 3600,
+        "id": 3014727,
+        "name": "Arrondissement de Grenoble",
+        "cod": 200
+    },
+    "Marseille": {
+        "coord": {
+            "lon": 5.5,
+            "lat": 43.3333
+        },
+        "weather": [
+            {
+                "id": 801,
+                "main": "Clouds",
+                "description": "few clouds",
+                "icon": "02d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 280.98,
+            "feels_like": 278.97,
+            "temp_min": 279.9,
+            "temp_max": 281.21,
+            "pressure": 1019,
+            "humidity": 53,
+            "sea_level": 1019,
+            "grnd_level": 999
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 3.13,
+            "deg": 310,
+            "gust": 7.15
+        },
+        "clouds": {
+            "all": 18
+        },
+        "dt": 1735039021,
+        "sys": {
+            "type": 2,
+            "id": 80238,
+            "country": "FR",
+            "sunrise": 1735024120,
+            "sunset": 1735056399
+        },
+        "timezone": 3600,
+        "id": 2995468,
+        "name": "Arrondissement de Marseille",
+        "cod": 200
+    },
+    "Lyon": {
+        "coord": {
+            "lon": 4.5833,
+            "lat": 45.75
+        },
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 276.33,
+            "feels_like": 274.08,
+            "temp_min": 275.93,
+            "temp_max": 277.49,
+            "pressure": 1029,
+            "humidity": 79,
+            "sea_level": 1029,
+            "grnd_level": 965
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 2.3,
+            "deg": 347,
+            "gust": 5.85
+        },
+        "clouds": {
+            "all": 99
+        },
+        "dt": 1735038951,
+        "sys": {
+            "type": 2,
+            "id": 2007821,
+            "country": "FR",
+            "sunrise": 1735024867,
+            "sunset": 1735056092
+        },
+        "timezone": 3600,
+        "id": 2996943,
+        "name": "Arrondissement de Lyon",
+        "cod": 200
+    },
+    "Montreal": {
+        "coord": {
+            "lon": -73.5878,
+            "lat": 45.5088
+        },
+        "weather": [
+            {
+                "id": 601,
+                "main": "Snow",
+                "description": "snow",
+                "icon": "13n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 264.93,
+            "feels_like": 258.66,
+            "temp_min": 263.71,
+            "temp_max": 266.63,
+            "pressure": 1022,
+            "humidity": 91,
+            "sea_level": 1022,
+            "grnd_level": 1018
+        },
+        "visibility": 2012,
+        "wind": {
+            "speed": 4.12,
+            "deg": 20
+        },
+        "snow": {
+            "1h": 0.51
+        },
+        "clouds": {
+            "all": 100
+        },
+        "dt": 1735039200,
+        "sys": {
+            "type": 1,
+            "id": 498,
+            "country": "CA",
+            "sunrise": 1735043578,
+            "sunset": 1735074916
+        },
+        "timezone": -18000,
+        "id": 6077243,
+        "name": "Montreal",
+        "cod": 200
+    },
+    "New York": {
+        "coord": {
+            "lon": -74.006,
+            "lat": 40.7143
+        },
+        "weather": [
+            {
+                "id": 803,
+                "main": "Clouds",
+                "description": "broken clouds",
+                "icon": "04n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 272.24,
+            "feels_like": 266.89,
+            "temp_min": 270.12,
+            "temp_max": 273.27,
+            "pressure": 1026,
+            "humidity": 60,
+            "sea_level": 1026,
+            "grnd_level": 1025
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 5.36,
+            "deg": 287,
+            "gust": 7.15
+        },
+        "clouds": {
+            "all": 75
+        },
+        "dt": 1735038630,
+        "sys": {
+            "type": 1,
+            "id": 4610,
+            "country": "US",
+            "sunrise": 1735042689,
+            "sunset": 1735076006
+        },
+        "timezone": -18000,
+        "id": 5128581,
+        "name": "New York",
+        "cod": 200
+    },
+    "Conakry": {
+        "coord": {
+            "lon": -13.6773,
+            "lat": 9.538
+        },
+        "weather": [
+            {
+                "id": 721,
+                "main": "Haze",
+                "description": "haze",
+                "icon": "50d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 304.19,
+            "feels_like": 304.91,
+            "temp_min": 304.19,
+            "temp_max": 304.19,
+            "pressure": 1012,
+            "humidity": 45,
+            "sea_level": 1012,
+            "grnd_level": 1011
+        },
+        "visibility": 4000,
+        "wind": {
+            "speed": 3.09,
+            "deg": 110
+        },
+        "clouds": {
+            "all": 78
+        },
+        "dt": 1735039218,
+        "sys": {
+            "type": 1,
+            "id": 2451,
+            "country": "GN",
+            "sunrise": 1735024044,
+            "sunset": 1735065683
+        },
+        "timezone": 0,
+        "id": 2422465,
+        "name": "Conakry",
+        "cod": 200
+    },
+    "Dakar": {
+        "coord": {
+            "lon": -17.4441,
+            "lat": 14.6937
+        },
+        "weather": [
+            {
+                "id": 801,
+                "main": "Clouds",
+                "description": "few clouds",
+                "icon": "02d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 297.22,
+            "feels_like": 297.48,
+            "temp_min": 297.22,
+            "temp_max": 297.22,
+            "pressure": 1015,
+            "humidity": 69,
+            "sea_level": 1015,
+            "grnd_level": 1015
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 5.14,
+            "deg": 360
+        },
+        "clouds": {
+            "all": 20
+        },
+        "dt": 1735039043,
+        "sys": {
+            "type": 1,
+            "id": 2419,
+            "country": "SN",
+            "sunrise": 1735025506,
+            "sunset": 1735066029
+        },
+        "timezone": 0,
+        "id": 2253354,
+        "name": "Dakar",
+        "cod": 200
+    }
+}

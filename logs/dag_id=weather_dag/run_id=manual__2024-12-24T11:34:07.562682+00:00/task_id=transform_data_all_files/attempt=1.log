@@ -1,0 +1,35 @@
+[2024-12-24T11:34:12.884+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag.transform_data_all_files manual__2024-12-24T11:34:07.562682+00:00 [queued]>
+[2024-12-24T11:34:12.889+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag.transform_data_all_files manual__2024-12-24T11:34:07.562682+00:00 [queued]>
+[2024-12-24T11:34:12.889+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2024-12-24T11:34:12.897+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): transform_data_all_files> on 2024-12-24 11:34:07.562682+00:00
+[2024-12-24T11:34:12.903+0000] {standard_task_runner.py:60} INFO - Started process 3073 to run task
+[2024-12-24T11:34:12.907+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'weather_dag', 'transform_data_all_files', 'manual__2024-12-24T11:34:07.562682+00:00', '--job-id', '1384', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmpuyh2ecyf']
+[2024-12-24T11:34:12.908+0000] {standard_task_runner.py:88} INFO - Job 1384: Subtask transform_data_all_files
+[2024-12-24T11:34:12.920+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-24T11:34:12.947+0000] {task_command.py:423} INFO - Running <TaskInstance: weather_dag.transform_data_all_files manual__2024-12-24T11:34:07.562682+00:00 [running]> on host f70f31c57d74
+[2024-12-24T11:34:13.018+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thiernosidybah232@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_dag' AIRFLOW_CTX_TASK_ID='transform_data_all_files' AIRFLOW_CTX_EXECUTION_DATE='2024-12-24T11:34:07.562682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-24T11:34:07.562682+00:00'
+[2024-12-24T11:34:13.025+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/extract.py", line 93, in transform_data_intro_csv_all_files
+    data  = json.load(file)
+  File "/usr/local/lib/python3.8/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/usr/local/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.8/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 345 column 9 (char 8185)
+[2024-12-24T11:34:13.032+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=weather_dag, task_id=transform_data_all_files, execution_date=20241224T113407, start_date=20241224T113412, end_date=20241224T113413
+[2024-12-24T11:34:13.040+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 1384 for task transform_data_all_files (Expecting property name enclosed in double quotes: line 345 column 9 (char 8185); 3073)
+[2024-12-24T11:34:13.077+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-12-24T11:34:13.107+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

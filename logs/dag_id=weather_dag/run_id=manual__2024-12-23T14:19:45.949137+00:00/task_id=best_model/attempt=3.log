@@ -1,0 +1,32 @@
+[2024-12-23T14:22:08.249+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag.best_model manual__2024-12-23T14:19:45.949137+00:00 [queued]>
+[2024-12-23T14:22:08.260+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag.best_model manual__2024-12-23T14:19:45.949137+00:00 [queued]>
+[2024-12-23T14:22:08.260+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 3
+[2024-12-23T14:22:08.270+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): best_model> on 2024-12-23 14:19:45.949137+00:00
+[2024-12-23T14:22:08.278+0000] {standard_task_runner.py:60} INFO - Started process 23261 to run task
+[2024-12-23T14:22:08.280+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'weather_dag', 'best_model', 'manual__2024-12-23T14:19:45.949137+00:00', '--job-id', '432', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmph030o_jz']
+[2024-12-23T14:22:08.281+0000] {standard_task_runner.py:88} INFO - Job 432: Subtask best_model
+[2024-12-23T14:22:08.294+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-23T14:22:08.333+0000] {task_command.py:423} INFO - Running <TaskInstance: weather_dag.best_model manual__2024-12-23T14:19:45.949137+00:00 [running]> on host b853fb0270cd
+[2024-12-23T14:22:08.404+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thiernosidybah232@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_dag' AIRFLOW_CTX_TASK_ID='best_model' AIRFLOW_CTX_EXECUTION_DATE='2024-12-23T14:19:45.949137+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-23T14:19:45.949137+00:00'
+[2024-12-23T14:22:08.454+0000] {logging_mixin.py:188} INFO - The best Model is Decision Tree Regressor,  -72.45615904903637 
+[2024-12-23T14:22:08.455+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/extract.py", line 237, in best_model_function
+    train_and_save_model (DecisionTreeRegressor(random_state = 0), feats, target, "decision_tree_regresor")
+  File "/opt/airflow/dags/extract.py", line 211, in train_and_save_model
+    os.makedirs(path_to_model)
+  File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/app/model'
+[2024-12-23T14:22:08.458+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=weather_dag, task_id=best_model, execution_date=20241223T141945, start_date=20241223T142208, end_date=20241223T142208
+[2024-12-23T14:22:08.465+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 432 for task best_model ([Errno 13] Permission denied: '/app/model'; 23261)
+[2024-12-23T14:22:08.492+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-12-23T14:22:08.519+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

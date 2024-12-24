@@ -1,0 +1,16 @@
+[2024-12-24T12:35:11.381+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag.Best_model scheduled__2024-12-24T12:34:00+00:00 [queued]>
+[2024-12-24T12:35:11.388+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag.Best_model scheduled__2024-12-24T12:34:00+00:00 [queued]>
+[2024-12-24T12:35:11.388+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2024-12-24T12:35:11.398+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Best_model> on 2024-12-24 12:34:00+00:00
+[2024-12-24T12:35:11.406+0000] {standard_task_runner.py:60} INFO - Started process 16838 to run task
+[2024-12-24T12:35:11.412+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'weather_dag', 'Best_model', 'scheduled__2024-12-24T12:34:00+00:00', '--job-id', '1790', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmpkhtsfxjh']
+[2024-12-24T12:35:11.420+0000] {standard_task_runner.py:88} INFO - Job 1790: Subtask Best_model
+[2024-12-24T12:35:11.445+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-24T12:35:11.538+0000] {task_command.py:423} INFO - Running <TaskInstance: weather_dag.Best_model scheduled__2024-12-24T12:34:00+00:00 [running]> on host f70f31c57d74
+[2024-12-24T12:35:11.656+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thiernosidybah232@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_dag' AIRFLOW_CTX_TASK_ID='Best_model' AIRFLOW_CTX_EXECUTION_DATE='2024-12-24T12:34:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-24T12:34:00+00:00'
+[2024-12-24T12:35:11.657+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-12-24T12:35:11.670+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=weather_dag, task_id=Best_model, execution_date=20241224T123400, start_date=20241224T123511, end_date=20241224T123511
+[2024-12-24T12:35:11.702+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-12-24T12:35:11.719+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

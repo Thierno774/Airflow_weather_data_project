@@ -1,0 +1,29 @@
+[2024-12-24T12:53:07.577+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag.Random_Forest scheduled__2024-12-24T12:52:00+00:00 [queued]>
+[2024-12-24T12:53:07.584+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag.Random_Forest scheduled__2024-12-24T12:52:00+00:00 [queued]>
+[2024-12-24T12:53:07.584+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2024-12-24T12:53:07.594+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Random_Forest> on 2024-12-24 12:52:00+00:00
+[2024-12-24T12:53:07.600+0000] {standard_task_runner.py:60} INFO - Started process 21998 to run task
+[2024-12-24T12:53:07.603+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'weather_dag', 'Random_Forest', 'scheduled__2024-12-24T12:52:00+00:00', '--job-id', '1938', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmpt1qur7z4']
+[2024-12-24T12:53:07.605+0000] {standard_task_runner.py:88} INFO - Job 1938: Subtask Random_Forest
+[2024-12-24T12:53:07.616+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-24T12:53:07.644+0000] {task_command.py:423} INFO - Running <TaskInstance: weather_dag.Random_Forest scheduled__2024-12-24T12:52:00+00:00 [running]> on host f70f31c57d74
+[2024-12-24T12:53:07.708+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thiernosidybah232@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_dag' AIRFLOW_CTX_TASK_ID='Random_Forest' AIRFLOW_CTX_EXECUTION_DATE='2024-12-24T12:52:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-24T12:52:00+00:00'
+[2024-12-24T12:53:07.755+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/ensemble/_forest.py:578: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable OOB estimates.
+  warn(
+
+[2024-12-24T12:53:07.769+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/ensemble/_forest.py:578: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable OOB estimates.
+  warn(
+
+[2024-12-24T12:53:07.781+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/ensemble/_forest.py:578: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable OOB estimates.
+  warn(
+
+[2024-12-24T12:53:07.792+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/ensemble/_forest.py:578: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable OOB estimates.
+  warn(
+
+[2024-12-24T12:53:07.794+0000] {logging_mixin.py:188} INFO - The Negative Score with Random Forest  -86.08
+[2024-12-24T12:53:07.795+0000] {python.py:201} INFO - Done. Returned value was: -86.0804946666674
+[2024-12-24T12:53:07.809+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=weather_dag, task_id=Random_Forest, execution_date=20241224T125200, start_date=20241224T125307, end_date=20241224T125307
+[2024-12-24T12:53:07.854+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-12-24T12:53:07.868+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

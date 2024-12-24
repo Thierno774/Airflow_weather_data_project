@@ -1,0 +1,16 @@
+[2024-12-24T10:42:16.459+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag.transform_data_top_20_files manual__2024-12-24T10:42:11.954927+00:00 [queued]>
+[2024-12-24T10:42:16.466+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag.transform_data_top_20_files manual__2024-12-24T10:42:11.954927+00:00 [queued]>
+[2024-12-24T10:42:16.466+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2024-12-24T10:42:16.478+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): transform_data_top_20_files> on 2024-12-24 10:42:11.954927+00:00
+[2024-12-24T10:42:16.484+0000] {standard_task_runner.py:60} INFO - Started process 2654 to run task
+[2024-12-24T10:42:16.486+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'weather_dag', 'transform_data_top_20_files', 'manual__2024-12-24T10:42:11.954927+00:00', '--job-id', '1149', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmpk8r7d34x']
+[2024-12-24T10:42:16.487+0000] {standard_task_runner.py:88} INFO - Job 1149: Subtask transform_data_top_20_files
+[2024-12-24T10:42:16.499+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-24T10:42:16.541+0000] {task_command.py:423} INFO - Running <TaskInstance: weather_dag.transform_data_top_20_files manual__2024-12-24T10:42:11.954927+00:00 [running]> on host b853fb0270cd
+[2024-12-24T10:42:16.634+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thiernosidybah232@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_dag' AIRFLOW_CTX_TASK_ID='transform_data_top_20_files' AIRFLOW_CTX_EXECUTION_DATE='2024-12-24T10:42:11.954927+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-24T10:42:11.954927+00:00'
+[2024-12-24T10:42:16.645+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-12-24T10:42:16.655+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=weather_dag, task_id=transform_data_top_20_files, execution_date=20241224T104211, start_date=20241224T104216, end_date=20241224T104216
+[2024-12-24T10:42:16.698+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-12-24T10:42:16.718+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

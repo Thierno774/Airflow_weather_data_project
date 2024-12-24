@@ -1,0 +1,35 @@
+[2024-12-23T09:27:26.111+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag.prepare_data manual__2024-12-23T09:27:15.942462+00:00 [queued]>
+[2024-12-23T09:27:26.126+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag.prepare_data manual__2024-12-23T09:27:15.942462+00:00 [queued]>
+[2024-12-23T09:27:26.127+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2024-12-23T09:27:26.143+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): prepare_data> on 2024-12-23 09:27:15.942462+00:00
+[2024-12-23T09:27:26.154+0000] {standard_task_runner.py:60} INFO - Started process 3604 to run task
+[2024-12-23T09:27:26.159+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'weather_dag', 'prepare_data', 'manual__2024-12-23T09:27:15.942462+00:00', '--job-id', '206', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmp0swq3wge']
+[2024-12-23T09:27:26.160+0000] {standard_task_runner.py:88} INFO - Job 206: Subtask prepare_data
+[2024-12-23T09:27:26.180+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-23T09:27:26.229+0000] {task_command.py:423} INFO - Running <TaskInstance: weather_dag.prepare_data manual__2024-12-23T09:27:15.942462+00:00 [running]> on host b853fb0270cd
+[2024-12-23T09:27:26.342+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thiernosidybah232@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_dag' AIRFLOW_CTX_TASK_ID='prepare_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-23T09:27:15.942462+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-23T09:27:15.942462+00:00'
+[2024-12-23T09:27:26.362+0000] {logging_mixin.py:188} INFO -      temperature                        city  pression                 date
+173       274.02  Arrondissement de Grenoble      1031  2024-12-17 20:07:31
+164       274.02  Arrondissement de Grenoble      1031  2024-12-17 20:17:46
+155       274.02  Arrondissement de Grenoble      1031  2024-12-17 20:18:29
+146       279.58  Arrondissement de Grenoble      1024  2024-12-18 13:14:37
+137       268.46  Arrondissement de Grenoble      1017  2024-12-23 08:35:38
+[2024-12-23T09:27:26.362+0000] {python.py:201} INFO - Done. Returned value was:      temperature                        city  pression                 date
+173       274.02  Arrondissement de Grenoble      1031  2024-12-17 20:07:31
+164       274.02  Arrondissement de Grenoble      1031  2024-12-17 20:17:46
+155       274.02  Arrondissement de Grenoble      1031  2024-12-17 20:18:29
+146       279.58  Arrondissement de Grenoble      1024  2024-12-18 13:14:37
+137       268.46  Arrondissement de Grenoble      1017  2024-12-23 08:35:38
+..           ...                         ...       ...                  ...
+36        279.14                    Toulouse      1029  2024-12-23 09:18:58
+27        279.14                    Toulouse      1029  2024-12-23 09:21:46
+18        279.14                    Toulouse      1029  2024-12-23 09:26:51
+9         279.14                    Toulouse      1029  2024-12-23 09:26:53
+0         279.14                    Toulouse      1029  2024-12-23 09:27:20
+
+[180 rows x 4 columns]
+[2024-12-23T09:27:26.417+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=weather_dag, task_id=prepare_data, execution_date=20241223T092715, start_date=20241223T092726, end_date=20241223T092726
+[2024-12-23T09:27:26.451+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-12-23T09:27:26.479+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
