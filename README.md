@@ -1,6 +1,6 @@
 # Airflow_weather_data_project
 
-# Extract and Transform Weather Data with Airflow
+# Extraction, Transformation, Analyse des données et Entrainement des Modèles de Machine Learning  et Ochestration avec Airflow
 This project uses Apache Airflow to extract weather data from an API, transform the data, and load it in 
 postgreSQL database. The workflow is designed to run daily and can be easily customized to extract weather data for any city
 
@@ -52,7 +52,7 @@ Once you've set up the DAG and connections, the workflow will run automatically 
 
 The transformed weather data will be PostgreSQL database.
 
-# Customization
+# Machine Learning
 
 To extract weather data for a different city, modify the endpoint parameter in the HttpSensor and SimpleHttpOperator tasks in the weather_dag.py file. You'll also need to update the transform_load_data function to extract the relevant data for the new city.
 
