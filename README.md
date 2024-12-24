@@ -1,5 +1,3 @@
-# Airflow_weather_data_project
-
 # Extraction, Transformation, Analyse des données et Entrainement des Modèles de Machine Learning  et Ochestration avec Airflow
 This project uses Apache Airflow to extract weather data from an API, transform the data, and load it in 
 postgreSQL database. The workflow is designed to run daily and can be easily customized to extract weather data for any city
